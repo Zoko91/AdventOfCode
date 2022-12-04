@@ -62,5 +62,5 @@ with open('input.txt') as f:
 
 # First star
 print(howManyPairs(lignes))
-# Answer :
+# Answer : 919
 
