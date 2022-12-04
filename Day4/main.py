@@ -56,11 +56,12 @@ def howManyPairs(lines):
 with open('input.txt') as f:
     lignes = f.readlines()
 
+####################################
 # First star
 # print(howManyContained(lignes))
 # Answer : 453
-
-# First star
-print(howManyPairs(lignes))
+####################################
+# Second star
+# print(howManyPairs(lignes))
 # Answer : 919
 
