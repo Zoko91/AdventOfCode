@@ -36,6 +36,20 @@ def moveCrates(piles,x,a,b):
             val = piles[a].pop()
             piles[b].append(val)
 
+def instructions2(data,piles):
+    tab = data[10:]
+    for i in range(len(tab)):
+        tab[i] = tab[i].rstrip().split(' ')
+        moveCratesStar2(piles, int(tab[i][1]), int(tab[i][3])-1, int(tab[i][5])-1)
+    return piles
+
+def moveCratesStar2(piles,x,a,b):
+    x = min(len(piles[a]), x)
+    for i in range(x,0,-1):
+        val = piles[a].pop(-i)
+        piles[b].append(val)
+
+
 # Extract the top crate of each pile
 def extractTopCrate(listes):
     res = ''
@@ -44,6 +58,12 @@ def extractTopCrate(listes):
     return res
 
 # 1 star
-print(extractTopCrate(instructions(lignes,extractList(lignes))))
+# print(extractTopCrate(instructions(lignes,extractList(lignes))))
 # Answer: WHTLRMZRC
+
+# 2 star
+print(extractTopCrate(instructions2(lignes,extractList(lignes))))
+# Answer: GMPMLWNMG
+
+
 
