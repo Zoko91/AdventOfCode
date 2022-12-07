@@ -62,3 +62,16 @@ print(len(sizes)) # taille de sizes
 # 1st star
 print(sum(sizeFile for sizeFile in sizes.values() if sizeFile < 100000)) # parcourt chaque valeur du dictionnaire
 # Answer : 1908462
+
+########### Part two ############
+
+unusedspace = 70000000 - getDirSize(firstFile)
+print(unusedspace) # Espace non utilisé : 26043024
+neededSpace = 30000000-26043024
+print(neededSpace) # Espace necessaire à libérer: 3956976
+
+
+# 2nd star
+print(min(sizeFile for sizeFile in sizes.values() if sizeFile > 3956976))
+# Answer : 3979145
+
