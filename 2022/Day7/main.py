@@ -26,22 +26,21 @@ for i in range(len(lignes)):
         cmdLine = lignes[i].split()
         ## Récupère toutes les parties de la ligne
 
-        cmd = cmdLine[1]
-        if cmd == 'cd':
-            directory = cmdLine[2]
+        if cmdLine[1] == 'cd':
             ## Récupère le nom du dossier de la ligne
 
-            if directory == '..':
+            if cmdLine[2] == '..':
                 ## si c'est un cmd .. alors
                 f = f.parent
+
             else:
-                file = File(directory)
+                file = File(cmdLine[2])
                 file.parent = f
                 f.children.append(file)
                 f = file
+
     else:
         size, name = lignes[i].split()
-        # Only care if we are looking at a file.
         if size != 'dir':
             file = File(name, int(size))
             f.children.append(file)
