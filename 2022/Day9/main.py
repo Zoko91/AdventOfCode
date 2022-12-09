@@ -12,7 +12,7 @@ def action(H, T):
     # (if dX and/or dY =1) means it is on an adjacent cell
     up = T[0] > H[0]
     right = T[1] > H[1]
-    if dX >= 2 & dY <= 2:
+    if dX >= 2 & dY >= 2:
         # because if dX or dY =1 and the other >=2 then it is on the diagonal
         T = (H[0]+1 if up else H[0]-1, H[1]+1 if right else H[1]-1)
     elif dX >= 2:  # straight line configuration
@@ -32,9 +32,9 @@ for line in lines:
     row = 0
 
     if direction == 'U':
-        row = -1
-    elif direction == 'D':
         row = 1
+    elif direction == 'D':
+        row = -1
     elif direction == 'R':
         col = 1
     elif direction == 'L':
@@ -42,6 +42,7 @@ for line in lines:
 
     for i in range(int(nb)):
         H = (H[0] + row, H[1]+col)
+        print(H)
         T = action(H, T)
         position.append(T)
 
@@ -51,6 +52,7 @@ for i in range(len(position)):
     if position[i] not in newList:
         newList.append(position[i])
 
+
 # 1st star
 print(len(newList))
-# Answer: 7043 too high
+# Answer: 5907
