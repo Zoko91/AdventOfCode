@@ -59,6 +59,6 @@ print(signalStrength)
 # 2nd star
 CRT.split('\n')
 print(CRT)
-# Answer:
+# Answer: ZRARLFZU
 
 
