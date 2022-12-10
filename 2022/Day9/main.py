@@ -22,10 +22,16 @@ def action(H, T):
     return T
 
 
-# Initialisation (down left)
+# Initialisation
 H = (0, 0)
 T = (0, 0)
+listT = []
+for i in range(9):
+    listT.append((0, 0))
+
 position = [(0, 0)]
+positionListT = [(0, 0)]
+
 for line in lines:
     direction, nb = line.split()
     col = 0
@@ -42,17 +48,29 @@ for line in lines:
 
     for i in range(int(nb)):
         H = (H[0] + row, H[1]+col)
-        print(H)
         T = action(H, T)
         position.append(T)
+        for j in range(9):
+            if j == 0:
+                listT[0] = T
+            else:
+                listT[j] = action(listT[j-1], listT[j])
+        positionListT.append(listT[8])
 
-print(position)
 newList = []
+newListT = []
 for i in range(len(position)):
     if position[i] not in newList:
         newList.append(position[i])
+for i in range(len(positionListT)):
+    if positionListT[i] not in newListT:
+        newListT.append(positionListT[i])
 
 
 # 1st star
 print(len(newList))
 # Answer: 5907
+
+# 2nd star
+print(len(newListT))
+# Answer:
