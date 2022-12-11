@@ -1,4 +1,4 @@
-# DAY 11
+# DAY 11 First star
 
 with open('input.txt') as inpt:
     data = inpt.read().strip()
@@ -29,9 +29,9 @@ for line in lines:
 
 # Loop of 20 rounds
 for i in range(20):                                 # i for loop
-    print('Loop : ' + str(i))
+    # print('Loop : ' + str(i))
     for j in range(len(lines)):                     # j for monkeys
-        print('Monkey : ' + str(mnumber[j]))
+        # print('Monkey : ' + str(mnumber[j]))
         lenloop = len(mval[j])
         for k in range(lenloop):                    # k for item
             worry = 0
@@ -54,7 +54,7 @@ for i in range(20):                                 # i for loop
             else:
                 mval[ifFalse[j]].append(str(worry))
             itemsVisited[j] += 1
-        print('Items visited : '+str(itemsVisited[j]))
+        # print('Items visited : '+str(itemsVisited[j]))
 
 # First star
 itemsVisited.sort()
