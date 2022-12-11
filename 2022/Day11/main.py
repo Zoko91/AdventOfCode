@@ -27,8 +27,6 @@ for line in lines:
     value.append(val)
     mval.append(mvalues)
 
-# print(mval[0].pop(0))
-
 # Loop of 20 rounds
 for i in range(20):                                 # i for loop
     print('Loop : ' + str(i))
@@ -39,7 +37,7 @@ for i in range(20):                                 # i for loop
             worry = 0
             if operator[j] == '*':
                 if value[j] == 'old':
-                    worry = int(mval[j][0]) ^ 2
+                    worry = int(mval[j][0]) * int(mval[j][0])
                 else:
                     worry = int(mval[j][0]) * int(value[j])
             else:
@@ -61,7 +59,4 @@ for i in range(20):                                 # i for loop
 # First star
 itemsVisited.sort()
 print(itemsVisited[-2]*itemsVisited[-1])
-# Answer: 79236 That's not the right answer; your answer is too high.
-# Answer: 49062 That's not the right answer; your answer is too low.
-# Answer:
-
+# Answer: 61503
