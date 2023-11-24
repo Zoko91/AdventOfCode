@@ -1,15 +1,19 @@
-# AdventOfCode
+# Advent of Code
 
 Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like.
+[Advent of Code](https://adventofcode.com/)
 
-**Languages often used:** Python, JS, C#.
+## Years Participated
+- 2022
+- 2023
 
-The goal of this calender is skill-improving, self-teaching and the improvement of one's will to challenge. 
+## Languages
+- Python (mostly)
+- JavaScript
+- C#
 
-`` I am Joseph, a 21 y.o. engineering student, and 2022 is my first Advent of code ! I'll try my best``
+Feel free to explore the solutions and code snippets . The puzzles cover a range of difficulty levels, providing a great opportunity for skill improvement and self-teaching. 
 
-Thanks for reading!
+I'm Joseph, an AI engineering student from France. Thanks for stopping by!
 
-
-
-
+Happy coding! 🚀
