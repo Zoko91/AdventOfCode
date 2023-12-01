@@ -65,7 +65,7 @@ def find_letter_number(word, order=True):
 
 total_cost = 0
 for line in lines:
-    # Get the first and second number adds them as string to build a 2 integers numbers then cast to it
+    # Get the first and second number adds them as string to build a 2-integers number, then cast to int
     total_cost += int(find_letter_number(line)+find_letter_number(line,False))
 
 # Part two: 54706
