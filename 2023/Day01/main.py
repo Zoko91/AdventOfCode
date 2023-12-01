@@ -68,7 +68,7 @@ for line in lines:
     # Get the first and second number adds them as string to build a 2 integers numbers then cast to it
     total_cost += int(find_letter_number(line)+find_letter_number(line,False))
 
-# Part two:
+# Part two: 54706
 print(total_cost)
 
 
