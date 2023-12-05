@@ -42,5 +42,6 @@ for block in blocks[1:]:
     seeds = results
 
 seeds = [int(seed) for seed in seeds]
+
 # Part1 : 196167384
 print(min(seeds))
