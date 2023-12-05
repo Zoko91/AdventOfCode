@@ -1,4 +1,4 @@
-with open('input2.txt') as inpt:
+with open('example.txt') as inpt:
     data = inpt.read().strip()
 
 lines = [line for line in data.split('\n')]
@@ -81,7 +81,6 @@ seeds_ranges = get_initial_range(get_block(blocks[0]))
 for block in blocks[1:]:
     current_block = get_block(block)
     range_updated = []
-    print("BLOCK")
     for seed in seeds_ranges:
         for block_line in current_block:
             test = get_new_ranges(seed,block_line)
@@ -97,5 +96,5 @@ for block in blocks[1:]:
 
 print("Seeds ranges: ", seeds_ranges)
 
-# Part 2: 231 910 859 too high
+# Part 2: 46 (works for the example)
 print(min(min(seeds_ranges)))
