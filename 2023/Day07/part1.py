@@ -25,12 +25,10 @@ def get_rank(hand):
     elif len(hand_count) == 4:
         return all_camel_types["one pair"]
     else:
-        # High card
         return all_camel_types["high card"]
 
 def parse_input(line):
     a, b = line.split(' ')
-    # a = [letter for letter in a]
     return a, int(b)
 
 def card_value(card, cards_dict):
@@ -60,5 +58,5 @@ for l in list_to_hands_sorted:
         total_winnings += bid * current_rank
         current_rank += 1
 
-# Part1: 251120792 too low
+# Part1: 251121738
 print(total_winnings)
