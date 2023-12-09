@@ -17,10 +17,21 @@ def predict(ex_l):
         prediction += l[-1]
     return prediction
 
+def predict_inverted(ex_l):
+    prediction = 0
+    for l in ex_l[::-1]:
+        prediction = l[0] - prediction
+    return prediction
+
 total = 0
+total_inverted = 0
 for line in lines:
-    total += predict(extrapolate(line))
+    ex_line = extrapolate(line)
+    total += predict(ex_line)
+    total_inverted += predict_inverted(ex_line)
 
 # Part 1: 2043183816
 print(total)
 
+# Part 2: 1118
+print(total_inverted)
